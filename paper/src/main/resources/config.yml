@@ -1,0 +1,13 @@
+# Must match the 'secret' in plugins/fakeplayers/config.properties on Velocity
+secret: "change-me"
+# Seconds between full re-syncs to the proxy
+sync-interval-seconds: 30
+# Auto-save fake player data (inventory, position...) every N seconds
+autosave-seconds: 60
+suppress-join-quit-messages: false
+auto-respawn: true
+defaults:
+  gamemode: SURVIVAL
+  ping: 0
+  listed: true
+  autospawn: true
