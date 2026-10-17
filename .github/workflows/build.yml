@@ -40,4 +40,15 @@ jobs:
           path: paper/build/libs/FakePlayers-Paper.jar
 
       - name: Upload Velocity jar
-        uses:
+        uses: actions/upload-artifact@v4
+        with:
+          name: FakePlayers-Velocity
+          path: velocity/build/libs/FakePlayers-Velocity.jar
+
+      - name: Publish release (on tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            paper/build/libs/FakePlayers-Paper.jar
+            velocity/build/libs/FakePlayers-Velocity.jar
